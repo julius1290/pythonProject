@@ -1,5 +1,10 @@
 import math
-userInput = input("Please give a circle radius:\n")
+while True:
+    try:
+        userInput = float(input("Please give a circle radius:\n"))
+        break;
+    except ValueError:
+        print("Please give a valid number")
 radius = float(userInput)
 area = (radius**2)*math.pi
 print(area)
